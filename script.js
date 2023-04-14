@@ -20,8 +20,11 @@ function updateCoffeeView(coffeeQty) {
 
 function clickCoffee(data) {
   // Increment the data object's (passed into this function) coffee property by one
+  data.coffee = data.coffee + 1;
   // call the updateCoffeeView function and pass it the newly updated data.coffee property
+  updateCoffeeView(data.coffee);
   // call the renderProducers function and pass it the data object
+  renderProducers(data);
 }
 
 /**************
