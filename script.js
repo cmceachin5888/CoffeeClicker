@@ -16,7 +16,7 @@ const producerContainer = document.getElementById('producer_container');
 function updateCoffeeView(coffeeQty) {
   // Create a reference to the element who's ID is 'coffee_counter'
 
-  const coffeeCounter = document.getElementById("coffee_counter");
+  const coffeeCounter = document.getElementById('coffee_counter');
 
   // Set the innerText of that element to be the coffeeQty passed into this function
 
@@ -95,7 +95,7 @@ function deleteAllChildNodes(parent) {
 
 function renderProducers(data) {
   // call the unlockProducers function and pass it data.producers and data.coffee
-  const unlockedProducers = unlockProducers(data.producers, data.coffee);
+  unlockProducers(data.producers, data.coffee);
 
   // make a reference to the DOM element whose ID is producer_container
   const producerContainer = document.getElementById('producer_container');
@@ -186,7 +186,7 @@ bigCoffee.addEventListener('click', () => {
 // the event listener should call the buyButtonClick function and pass it the event, and the global data object
 producerContainer.addEventListener('click', (event) => {
   buyButtonClick(event, data);
-})
+});
 
 // You do not need to edit this last line. This simple runs your tick function every 1000ms, or 1s
 setInterval(() => tick(data), 1000);
